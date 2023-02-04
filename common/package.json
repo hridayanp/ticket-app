@@ -9,8 +9,8 @@
   ],
   "scripts": {
     "build": "npm run clean && tsc",
-    "clean": "del ./build/*",
-    "pre-publish": "npm version patch && npm publish"
+    "clean": "del-cli ./build/*",
+    "pub": "npm version patch && npm publish"
   },
   "keywords": [],
   "author": "",
