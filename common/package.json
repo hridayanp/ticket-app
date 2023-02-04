@@ -8,9 +8,9 @@
     "build/**/*"
   ],
   "scripts": {
-    "build-tsc": "tsc",
+    "build": "npm run clean && tsc",
     "clean": "del ./build/*",
-    "pre-publish": "npm run clean && npm version patch && npm run build-tsc"
+    "pre-publish": "npm version patch && npm publish"
   },
   "keywords": [],
   "author": "",
