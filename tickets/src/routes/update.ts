@@ -4,7 +4,7 @@ import {
   validateRequest,
   NotFoundError,
   requireAuth,
-  NotAuthorizedError,
+  NotAuthorisedError,
 } from '@hpticketing/gittix-common';
 import { Ticket } from '../model/ticket';
 
@@ -28,7 +28,7 @@ router.put(
     }
 
     if (ticket.userId !== req.currentUser!.id) {
-      throw new NotAuthorizedError();
+      throw new NotAuthorisedError();
     }
 
     ticket.set({
